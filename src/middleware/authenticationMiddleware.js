@@ -4,7 +4,7 @@ const { verifyToken } = require('../services/authService');
 function authenticationMiddleware(req, res, next) {
     if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
         const status = 401;
-        const message = 'Token inválido';
+        const message = 'Token não-válido';
         res.status(status).json({ status, message });
         return;
     }
