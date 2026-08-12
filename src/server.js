@@ -18,5 +18,6 @@ server.use(/^(?!\/(public|livros|autores|categorias)).*$/, authenticationMiddlew
 server.use(router) //rotas na prota 3000
 
 server.listen(8000, () => {
-  console.log("API Acessivel em: http://localhost:8000")
+  console.log("API All Books Disponível!")
+  console.log("Acesse: http://localhost:8000")
 })
